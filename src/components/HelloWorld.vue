@@ -1,14 +1,21 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
+import { useStore } from 'vuex';
 
-defineProps<{ msg: string }>()
+defineProps<{ msg: string }>();
 
-const count = ref(0)
+const store = useStore();
+
+const add = () => {
+  store.commit('add');
+};
+
+const count = ref(0);
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
-
+  <p @click="add">{{ $store.state.counter }}</p>
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
@@ -31,13 +38,11 @@ const count = ref(0)
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
+  <el-button>111</el-button>
+  <el-link type="primary">primary</el-link>
 </template>
 
 <style scoped>
-a {
-  color: #42b983;
-}
-
 label {
   margin: 0 0.5em;
   font-weight: bold;

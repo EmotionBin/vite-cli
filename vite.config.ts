@@ -10,12 +10,13 @@ export default defineConfig({
   resolve:{
     alias: {
       '@': pathResolve('src'),
-      'comps': pathResolve('src/components'),
-      'apis': pathResolve('src/apis'),
-      'views': pathResolve('src/views'),
-      'utils': pathResolve('src/utils'),
-      'routes': pathResolve('src/routes'),
-      'styles': pathResolve('src/styles'),
+      '@comps': pathResolve('src/components'),
+      '@apis': pathResolve('src/apis'),
+      '@views': pathResolve('src/views'),
+      '@utils': pathResolve('src/utils'),
+      '@routes': pathResolve('src/router'),
+      '@store': pathResolve('src/store'),
+      '@styles': pathResolve('src/styles'),
     }
   }
 })
