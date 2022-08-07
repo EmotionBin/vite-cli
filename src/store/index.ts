@@ -1,12 +1,8 @@
 import { createStore } from 'vuex';
+import user from './modules/user'
 
 export default createStore({
-  state: {
-    counter: 0
-  },
-  mutations: {
-    add(state) {
-      state.counter ++
-    }
+  modules: {
+    user
   }
 })

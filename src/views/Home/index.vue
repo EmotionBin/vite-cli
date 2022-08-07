@@ -11,6 +11,6 @@ import HelloWorld from '@comps/HelloWorld.vue';
 
 <style scoped>
 .container {
-  dispaly: flex;
+  display: flex;
 }
 </style>
